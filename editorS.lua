@@ -52,8 +52,8 @@ function isPlayerInACLGroup(player, ...)
     if (not isElement(player) or getElementType(player) ~= "player") then 
         return false 
     end
+    
     local account = getPlayerAccount(player)
-    if (isGuestAccount(account)) then return false end
     
     local acl = {...}
     if (#acl == 1) then    
